@@ -1,0 +1,59 @@
+sublime text editor + chrome
+in chrome page code
+side view Ctrl + Shift + i
+or
+full view  Ctrl + u
+
+mdn - Mozilla Developer Network - very good resource for
+everything around HTML, CSS, JavaScript
+just type for example
+mdn functions - to get answers on js functions
+
+sublime editor hotkeys
+ctrl+n = new file
+ctrl+s = save file
+ctrl+/ = comment line
+alt+. = close tag
+ctrl+d = select word under cursor, 
+second! ctrl+d = add next instance of this word to selection 
+so you can edit word in multiple lines
+alt+f3 = select all instances of word under cursor
+
+ctrl+shift+d = clone of line under cursor
+
+alt+shift+w = put &lt;p&gt; tag around selected
+to put different tag - after alt+shift+w - write needed tag
+to put needed tag on multiple lines 
+select lines
+ctrl+shift+l for multy line editing
+alt+shift+w for p tag on all lines
+write own tag - to overrite p tag on all edited lines
+
+alt+shift+f = autoformat selected, so alt+a befor to select all
+write html -> press tab = html sceleton to the file
+alt+shift+1(2)(3) to manage sublime windows quantity
+
+for autoformat shortcut
+preferences -> keybindings -> add to user window - { "keys": ["shift+alt+f"], "command": "reindent"}
+You can also add this command to userKeyBindings:
+
+{"keys": ["your key bind.."], "command": "rename_tag"} // like super+shift+k
+to install plugin - preferences ->packege control -> put plugin there
+(C:\Users\user_name\AppData\Roaming\Sublime Text 3\Packages)
+
+###############################################################################################
+
+mdm elements reference - to look at all html elements description
+<div>div</div> - container helping group content together, block element
+<span>span</span> - container to, but inline element
+<strong>strong</strong>(old<b></b>) - for strong letters
+<em>emphasise</em>(old<i></i>) - for italic
+<ol> - ordered list
+<li>item</li> list item
+</ol>
+<ul> - unordered list
+<li>item</li> list item
+</ul>
+
+
+
