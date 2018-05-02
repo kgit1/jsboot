@@ -20,6 +20,7 @@ so you can edit word in multiple lines
 alt+f3 = select all instances of word under cursor
 
 ctrl+shift+d = clone of line under cursor
+ctrl+lMouse = second cursor
 
 alt+shift+w = put &lt;p&gt; tag around selected
 to put different tag - after alt+shift+w - write needed tag
@@ -48,6 +49,8 @@ mdm elements reference - to look at all html elements description
 <span>span</span> - container to, but inline element
 <strong>strong</strong>(old<b></b>) - for strong letters
 <em>emphasise</em>(old<i></i>) - for italic
+
+lists
 <ol> - ordered list
 <li>item</li> list item
 </ol>
@@ -55,5 +58,211 @@ mdm elements reference - to look at all html elements description
 <li>item</li> list item
 </ul>
 
+by default in links used file protocol, to use local resources,
+and to point link to outside add "http://" at the begining of href
+<div class="inside" style="float:right">
+	<a href="https://www.google.com/search?q=corgi&newwindow=1&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiSocynr-XaAhWBBSwKHR9_BvkQ_AUICigB&biw=1918&bih=989"
+	title="corgi" target="_blank">
+	<img src="http://i.imgur.com/Zl0A6erm.jpg" title="Rusty">
+	</a>
+</div>
+
+tables
+html5 -> <thead> and <tbody> doing nothing just pointing reader the head and the body of the table
+<table border="1">
+	<thead>
+	<tr>
+		<th>Name</th>
+		th>Age</th>
+	/tr>
+	</thead>
+
+	<tbody>
+	<tr>
+		<td>Rusty</td>
+		<td>2</td>
+	</tr>
+	<tr>
+		<td>Wyatt</td>
+		<td>13</td>
+	</tr>
+	</tbody>
+</table>
+
+###############################################################################################
+
+<form></form> - shell container around inputs to submit them together
+<form action="/my-form-submiting-page" method="post">
+<!-- All input fields -->
+</form>
+
+action - specified where to send a data
+method specifies type of http request(GET, POST)
+GET - when we doing some like searching or retriving data(adds data in readable form to url request)
+example - file:///C:/JS/jsboot/firstPage/forms.html?login=john1&email=john%40dot.com&password=123
+after actual url "?" added - followed by input "name" + "=" + "value", inputs separated by "&"
+POST - when we doing some request to database like sending data
 
 
+<label></label>
+to add input name on screen you can just type it before input tag
+Login:<input type="text" name="login>
+
+but better to wrap text name togheter with input in <label> tag to give programms idea that this actual text is
+related to this actual input field
+<label>Login:<input type="text" name="login></label>
+
+or can be alternative syntax of using label
+"for" attribute direct label tag to element by its name or id
+<p><label>Login:<input type="text" name="login" placeholder="login" required></label></p>
+or					
+<p><label for="email">Email:</label><input type="email" name="email" placeholder="email" required></p>	
+label will put his text before specified element but if you want text to be inside same <p> tag - put <label> inside <p>
+
+
+-> mdn input
+<input> default type="text"
+<input type="password">
+<input type="email">
+<input type="date"> - date 
+<input type="datetime"> - time by timezone
+<input type="datetime-local"> - local time, time without timezone
+<input type="file"> - selecting file
+<input type="image"> - selecting image
+
+<input type="radio"> - radio button, value attribute - to point app what to send if on, 
+if name shared between radiobuttons - they connected and only one can be choosen
+<p>
+<label>Male:<input type="radio" id="male" name="sex" value="male"></label>
+<label>Female:<input type="radio" id="female" name="sex" value="female"></label>
+</p>
+
+<input type="checkbox"> - checkbox button, default value unchecked, "required" attribute for mandatory check to submit
+
+<input type="color"> - color picker
+<input type="range"> - range picker, default min="0" max="100"
+<input type="hidden"> - not displayed but submited to server
+
+dropdown menu - name attribut in select to add value to sended data, value in option - to switch value from text in option to needed on demand
+
+<select name="colorMenu">
+	<option>Red</option>
+	<option value="black">Black</option>
+	<option value="white">White</option>
+</select>
+attributes
+form - shows to which form related if placed not inside actual form
+size - how much lines viewed together
+multiple = multiple choise
+selected - which element shown selected at start
+name,required,disabled,autofocus
+
+
+<textarea rows="10" cols="20"></textarea> - text area for multiline input needs
+
+
+###############################################################################################
+
+forms validation with html attributes
+
+minlength
+maxlength
+
+required - forces input to be mandatory - defaul true
+
+type="email" - forces form to validate that field has text part followed by @ followed by text part
+text+@+text - without ?! etc symbols unacceptable in email addresses
+
+pattern - matches input characters with regular expression
+examples to give you a basic idea of how they work:
+
+a — matches one character that is a (not b, not aa, etc.)
+abc — matches a, followed by b, followed by c.
+a* — matches the character a, zero or more times (+ matches a character one or more times).
+[^a] — matches one character that is not a.
+a|b — matches one character that is a or b.
+[abc] — matches one character that is a, b, or c.
+[^abc] — matches one character that is not a, b, or c.
+[a-z] — matches any character in the range a–z, lower case only (you can use [A-Za-z] for lower and upper case, and [A-Z] for upper case only).
+a.c — matches a, followed by any character, followed by c.
+a{5} — matches a, 5 times.
+a{5,7} — matches a, 5 to 7 times, but no less or more.
+You can use numbers and other characters in these expressions too, such as:
+
+[ -] — matches a space or a dash.
+[0-9] — matches any digit in the range 0 to 9.
+You can combine these in pretty much any way you want, specifying different parts one after the other:
+
+[Ll].*k — A single character that is an upper or lowercase L, followed by zero or more characters of any type, followed by a single lowercase k.
+[A-Z][A-Za-z' -]+ — A single upper case character followed by one or more characters that are an upper or lower case letter, a dash, an apostrophe, 
+or a space. This could be used to validate the city/town names of English-speaking countries, which need to start with a capital letter, 
+but don't contain any other characters. Examples from the UK include Manchester, Ashton-under-lyne, and Bishop's Stortford.
+[0-9]{3}[ -][0-9]{3}[ -][0-9]{4} — A simple match for a US domestic phone number — three digits, followed by a space or a dash, 
+followed by three digits, followed by a space or a dash, followed by four digits. You might have to make this more complex, 
+as some people write their area code in parentheses, but it works for a simple demonstration.
+
+<form>
+  <input name="oneTwoNumbers" required pattern="[0-9]|[0-9][0-9]">
+  <button>Submit</button>
+</form>
+
+###############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+###############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###############################################################################################

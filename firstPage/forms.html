@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<div>
+			<div class="inside">
+				<a href="index.html">Home</a>
+			</div>
+		</div>
+		<div>
+			<div class="inside">
+				<form action="" method="post">
+					<input type="text" name="login" value="Login" placeholder="login" required="true" autofocus="true">
+					<input type="email" name="email" placeholder="email" required="true">
+					<input type="password" name="password" placeholder="password" required="true">
+					<input type="reset">
+					<button>Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div>
+			<div class="inside">
+				<form action="" method="get">
+					<p><label>Login:<input type="text" name="login" placeholder="login" required="true" minlength="5" maxlength="10"></label></p>					
+					<p><label for="email">Email:</label><input type="email" name="email" placeholder="email" required="true"></p>					
+					<p><label for="password">Password:</label><input type="password" name="password" placeholder="password" required="true" minlength="5" maxlength="15" title="Password must be between 5 and 10 characters"></p>	
+					<p><label>OneTwoNumbers:<input name="oneTwoNumbers" required pattern="[0-9]|[0-9][0-9]"></label></p>				
+					<p>
+						<label>Male:<input type="radio" id="male" name="sex" value="male"></label>
+						<label>Female:<input type="radio" id="female" name="sex" value="female"></label>
+					</p>
+					<p>
+						<select name="colorMenu" required pattern="Red|black|white">
+							<option>Color</option>
+							<option>Red</option>
+							<option value="black">Black</option>
+							<option value="white">White</option>
+							<option value="yellow">y</option>
+						</select>	
+					</p>
+					<p><label>Age<input name="age" required pattern="[1-9]|[1-9][0-9]|[1-9][0-9][0-9]"></label></p>
+					<p><label>0<input type="range" name="ageRange">100</label></p>
+					<p><label>Birthday:<input type="date"></label></p>
+					<label for="textArea">TEXTFIED</label>
+					<p><textarea name="textArea" rows="10" cols="30"></textarea></p>		
+					<p><label for="color">Color:</label><input type="color" name="color" required="true"></p>
+					<p><label>Terms YES <input type="checkbox" name="terms" required></label></p>
+
+					<p><input type="submit" value="Register"></p>
+					<p><button>Register</button></p>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
