@@ -21,3 +21,9 @@ div{
 	background:grey;
 	display:inline-block;
 }
+ul{
+	background: red;
+}
+li{
+	border: 2px solid blue;
+}

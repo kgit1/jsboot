@@ -50,13 +50,38 @@ mdm elements reference - to look at all html elements description
 <strong>strong</strong>(old<b></b>) - for strong letters
 <em>emphasise</em>(old<i></i>) - for italic
 
+###############################################################################################
+
 lists
-<ol> - ordered list
+ordered list
+<ol>
 <li>item</li> list item
 </ol>
-<ul> - unordered list
+
+unordered list
+<ul>
 <li>item</li> list item
 </ul>
+
+description list
+<dl>
+<dt>Mozila</dt> - groups of terms
+<dt>Firefox</dt> - groups of terms
+<dd> - descriptions
+A free, open source, cross-platform,
+graphical web browser.</dd>
+</dl>
+
+list-style-type: disc, circle, square, decimal, cjk-decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-alpha,
+lower-latin, upper-alpha, upper-latin etc
+Sets the type of bullets to use for the list, for example square or circle bullets for an unordered list, 
+or numbers, letters or roman numerals for an ordered list.
+list-style-position: inside, outside
+Sets whether the bullets appear inside the list items, or outside them before the start of each item.
+list-style-image: url(), none
+Allows you to use a custom image for the bullet, rather than a simple square or circle.
+
+###############################################################################################
 
 by default in links used file protocol, to use local resources,
 and to point link to outside add "http://" at the begining of href
@@ -205,6 +230,137 @@ as some people write their area code in parentheses, but it works for a simple d
   <input name="oneTwoNumbers" required pattern="[0-9]|[0-9][0-9]">
   <button>Submit</button>
 </form>
+
+###############################################################################################
+
+CSS - Cascade Style Sheet
+http://www.csszengarden.com/
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+background:
+body{
+background: url();
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+
+text-decoration:
+formal syntax = text-decoration-line | text-decoration-style | text-decoration-color
+
+examples
+.under {
+  text-decoration: underline red;
+}
+.over {
+  text-decoration: wavy overline lime;
+}
+.line {
+  text-decoration: line-through;
+}
+.plain {
+  text-decoration: none;
+}
+.underover {
+  text-decoration: dashed underline overline;
+}
+.blink {
+  text-decoration: blink;
+}
+
+###############################################################################################
+
+Selectors
+Descendant - one selector inside another
+
+li a{
+color:red;
+}
+
+Adjacent - one selector after another
+
+h4 + ul{
+border: 1px solid red;
+}
+
+Attribute - selector with attribute
+
+a[href="http://www.google.com"]{
+background: green;
+}
+
+*nth of type - every *nth selector of type
+
+ul:nth-of-type(3){
+color:green;
+}
+
+###############################################################################################
+
+pseudoclasses - used to act when element is in scecific state
+pseudoelements - used to work with certain area of element
+
+pseudoclasses 
+:active :any :any-link :checked :default :defined 
+:dir() :disabled :empty :enabled
+:first :first-child :first-of-type :fullscreen 
+:focus :hover :indeterminate :in-range
+:invalid :lang() :last-child :last-of-type :left 
+:link :not() :nth-child() :nth-last-child()
+:nth-last-of-type() :nth-of-type() :only-child 
+:only-of-type :optional :out-of-range
+:read-only :read-write :required :right :root 
+:scope :target :valid :visited
+
+:hover - changin element on mouse over it
+h1:hover {
+	color: blue;
+}
+
+:visited - changing visited anchors(links) <a> 
+a:visited {
+	color:gray;
+}
+
+
+pseudoelements
+
+::after
+::before
+::cue
+::first-letter
+::first-line
+::selection
+
+The content CSS property is used with the ::before and ::after pseudo-elements to generate content in an element. 
+Objects inserted using the content property are anonymous replaced elements.
+
+add pluss after links
+a::after {
+  content: "+";
+}
+
+add plus before links
+a::before {
+  content: "+";
+}
+
+style first letter of element
+p::first-letter {
+  font-size: 130%;
+}
+
+style first line of element
+p::first-line {
+  color: red;
+}
+
+::selection CSS pseudo-element applies styles to the portion of a document that has been highlighted 
+by the user (such as with the mouse).
+
+::selection {
+  background: cyan;
+}
 
 ###############################################################################################
 
