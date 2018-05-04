@@ -43,6 +43,7 @@ to install plugin - preferences ->packege control -> put plugin there
 (C:\Users\user_name\AppData\Roaming\Sublime Text 3\Packages)
 
 ###############################################################################################
+###############################################################################################
 
 mdm elements reference - to look at all html elements description
 <div>div</div> - container helping group content together, block element
@@ -50,6 +51,7 @@ mdm elements reference - to look at all html elements description
 <strong>strong</strong>(old<b></b>) - for strong letters
 <em>emphasise</em>(old<i></i>) - for italic
 
+###############################################################################################
 ###############################################################################################
 
 lists
@@ -81,6 +83,7 @@ Sets whether the bullets appear inside the list items, or outside them before th
 list-style-image: url(), none
 Allows you to use a custom image for the bullet, rather than a simple square or circle.
 
+###############################################################################################
 ###############################################################################################
 
 by default in links used file protocol, to use local resources,
@@ -114,6 +117,7 @@ html5 -> <thead> and <tbody> doing nothing just pointing reader the head and the
 	</tbody>
 </table>
 
+###############################################################################################
 ###############################################################################################
 
 <form></form> - shell container around inputs to submit them together
@@ -185,7 +189,7 @@ name,required,disabled,autofocus
 
 <textarea rows="10" cols="20"></textarea> - text area for multiline input needs
 
-
+###############################################################################################
 ###############################################################################################
 
 forms validation with html attributes
@@ -232,6 +236,7 @@ as some people write their area code in parentheses, but it works for a simple d
 </form>
 
 ###############################################################################################
+###############################################################################################
 
 CSS - Cascade Style Sheet
 http://www.csszengarden.com/
@@ -244,9 +249,10 @@ background-repeat: no-repeat;
 background-size:cover;
 }
 
+###############################################################################################
 
 text-decoration:
-formal syntax = text-decoration-line | text-decoration-style | text-decoration-color
+formal syntax = text-decoration-line || text-decoration-style || text-decoration-color
 
 examples
 .under {
@@ -268,6 +274,14 @@ examples
   text-decoration: blink;
 }
 
+###############################################################################################
+
+text-align: start | end | left | right | center | justify | match-parent
+
+CSS property describes how inline content like text is aligned in its parent block element. 
+text-align does not control the alignment of block elements, only their inline content.
+
+###############################################################################################
 ###############################################################################################
 
 Selectors
@@ -295,6 +309,7 @@ ul:nth-of-type(3){
 color:green;
 }
 
+###############################################################################################
 ###############################################################################################
 
 pseudoclasses - used to act when element is in scecific state
@@ -363,6 +378,112 @@ by the user (such as with the mouse).
 }
 
 ###############################################################################################
+###############################################################################################
+
+Fonts
+https://fonts.google.com - fonts here
+https://www.cssfontstack.com/ - a complete collection of web safe CSS font stacks
+https://baconipsum.com - backon ipsum
+
+add font
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+font-family: 'Indie Flower', cursive; <- font after coma is alternative(if main font failed to load)
+
+/* <length> values */
+font-size: 12px; - real value
+
+font-size: 0.8em; - relative value 
+Another way of setting the font size is with em values. The size of an em value is dynamic. 
+When defining the font-size property, an em is equal to the size of the font that applies 
+to the parent of the element in question. If you haven't set the font size anywhere on the page, 
+then it is the browser default, which is often 16px. So, by default 1em = 16px, and 2em = 32px. 
+If you set a font-size of 20px on the body element, then 1em = 20px and 2em = 40px. 
+Note that the value 2 is essentially a multiplier of the current em size.
+Note2 - em - takes closest parent size as point, so if body 10px, p inside 1.6em will be 16px, 
+span inside the p 1.6em - will be 25.6px
+
+relative size values depends on parent elements size taken as 1, 100% or medium
+/* <absolute-size> values */
+font-size: xx-small;
+font-size: x-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+
+/* <relative-size> values */
+font-size: smaller;
+font-size: larger;
+
+/* <percentage> values */
+font-size: 80%;
+
+/* Global values */
+font-size: inherit;
+font-size: initial;
+font-size: unset;
+
+###############################################################################################
+
+font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
+bold is equivalent to 700
+normal is equivalent to  400
+Many fonts only have 400 and 700 weights available. Available weights may vary font-to-font.
+
+###############################################################################################
+
+line-height: normal | 2.5 | 3em | 150% | 32px
+
+Prefer unitless numbers for line-height values
+CSS property sets the amount of space used for lines, such as in text. On block-level elements, 
+it specifies the minimum height of line boxes within the element. On non-replaced inline elements, 
+it specifies the height that is used to calculate line box height.
+
+###############################################################################################
+
+font-style: normal | italic | oblique
+
+###############################################################################################
+
+font-variant - CSS property is a shorthand for the longhand properties font-variant-caps, font-variant-numeric, 
+font-variant-alternates, font-variant-ligatures, and font-variant-east-asian
+
+font-variant: normal | none | [ <common-lig-values> || <discretionary-lig-values> || 
+<historical-lig-values> || <contextual-alt-values> || stylistic( <feature-value-name> ) || 
+historical-forms || styleset( <feature-value-name># ) || character-variant( <feature-value-name># ) 
+|| swash( <feature-value-name> ) || ornaments( <feature-value-name> ) || 
+annotation( <feature-value-name> ) || [ small-caps | all-small-caps | petite-caps | all-petite-caps 
+| unicase | titling-caps ] || <numeric-figure-values> || <numeric-spacing-values> || 
+<numeric-fraction-values> || ordinal || slashed-zero || <east-asian-variant-values> || 
+<east-asian-width-values> || ruby ]
+where 
+<common-lig-values> = [ common-ligatures | no-common-ligatures ]
+<discretionary-lig-values> = [ discretionary-ligatures | no-discretionary-ligatures ]
+<historical-lig-values> = [ historical-ligatures | no-historical-ligatures ]
+<contextual-alt-values> = [ contextual | no-contextual ]
+<feature-value-name> = <custom-ident>
+<numeric-figure-values> = [ lining-nums | oldstyle-nums ]
+<numeric-spacing-values> = [ proportional-nums | tabular-nums ]
+<numeric-fraction-values> = [ diagonal-fractions | stacked-fractions ]
+<east-asian-variant-values> = [ jis78 | jis83 | jis90 | jis04 | simplified | traditional ]
+<east-asian-width-values> = [ full-width | proportional-width ]
+
+CSS property is a shorthand for the longhand properties font-variant-caps, font-variant-numeric, 
+font-variant-alternates, font-variant-ligatures, and font-variant-east-asian
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,24 +1,21 @@
 body{
-	background:grey;
+	background:#cddaf4;
 }
-
 .main{
 	margin:auto;
 	width:800px;
 	background:white;
 }
-
 div{
 	margin:5px;
 	padding: 5px;
 	background:pink;
 	
 }
-
 .inside{
 
 	padding:5px;
-	background:grey;
+	background:#f9fafc;
 	display:inline-block;
 }
 ul{
