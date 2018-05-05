@@ -42,8 +42,10 @@ You can also add this command to userKeyBindings:
 to install plugin - preferences ->packege control -> put plugin there
 (C:\Users\user_name\AppData\Roaming\Sublime Text 3\Packages)
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 mdm elements reference - to look at all html elements description
 <div>div</div> - container helping group content together, block element
@@ -51,8 +53,10 @@ mdm elements reference - to look at all html elements description
 <strong>strong</strong>(old<b></b>) - for strong letters
 <em>emphasise</em>(old<i></i>) - for italic
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 lists
 ordered list
@@ -83,8 +87,10 @@ Sets whether the bullets appear inside the list items, or outside them before th
 list-style-image: url(), none
 Allows you to use a custom image for the bullet, rather than a simple square or circle.
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 by default in links used file protocol, to use local resources,
 and to point link to outside add "http://" at the begining of href
@@ -173,8 +179,10 @@ As your tables get a bit more complex in structure, it is useful to give them mo
 definition. One clear way to do this is by using <thead>, <tfoot>, and <tbody>, which allow you 
 to mark up a header, footer, and body section for the table.
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 <form></form> - shell container around inputs to submit them together
 <form action="/my-form-submiting-page" method="post">
@@ -245,8 +253,10 @@ name,required,disabled,autofocus
 
 <textarea rows="10" cols="20"></textarea> - text area for multiline input needs
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 forms validation with html attributes
 
@@ -291,8 +301,10 @@ as some people write their area code in parentheses, but it works for a simple d
   <button>Submit</button>
 </form>
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 CSS - Cascade Style Sheet
 http://www.csszengarden.com/
@@ -337,8 +349,10 @@ text-align: start | end | left | right | center | justify | match-parent
 CSS property describes how inline content like text is aligned in its parent block element. 
 text-align does not control the alignment of block elements, only their inline content.
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 Selectors
 Descendant - one selector inside another
@@ -365,8 +379,10 @@ ul:nth-of-type(3){
 color:green;
 }
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 pseudoclasses - used to act when element is in scecific state
 pseudoelements - used to work with certain area of element
@@ -433,8 +449,10 @@ by the user (such as with the mouse).
   background: cyan;
 }
 
+
 ###############################################################################################
 ###############################################################################################
+
 
 Fonts
 https://fonts.google.com - fonts here
@@ -530,12 +548,187 @@ CSS property is a shorthand for the longhand properties font-variant-caps, font-
 font-variant-alternates, font-variant-ligatures, and font-variant-east-asian
 
 
+###############################################################################################
+###############################################################################################
 
 
+div -> float related problem - div doesnt inherit floated elements size
+
+Depending upon the design being produced, each of the below clearfix CSS solutions has its own benefits.
+
+The clearfix does have useful applications but it has also been used as a hack. Before you use a clearfix 
+perhaps these modern css solutions can be useful:
+
+css flexbox
+css grid
+Modern Clearfix Solutions
+Container with overflow: auto;
+The simplest way to clear floated elements is using the style overflow: auto on the containing element. 
+This solution works in every modern browsers.
+
+<div style="overflow: auto;">
+  <img
+    style="float: right;"
+    src="path/to/floated-element.png"
+    width="500"
+    height="500"
+  > 
+  <p>Your content here…</p>
+</div>
+One downside, using certain combinations of margin and padding on the external element can cause scrollbars 
+to appear but this can be solved by placing the margin and padding on another parent containing element.
+
+Using ‘overflow: hidden’ is also a clearfix solution, but will not have scrollbars, however using hidden 
+will crop any content positioned outside of the containing element.
+
+Note: The floated element is an img tag in this example, but could be any html element.
+
+Clearfix Reloaded
+Thierry Koblentz on CSSMojo wrote: The very latest clearfix reloaded. He noted that by dropping support 
+for oldIE, the solution can be simplified to one css statement. Additionally, using display: block (instead of 
+display: table) allows margins to collapse properly when elements with clearfix are siblings.
+
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+This is the most modern version of the clearfix.
+
+Older Clearfix Solutions
+The below solutions are not necessary for modern browsers, but may be useful for targeting older browsers.
+
+Note that these solutions rely upon browser bugs and therefore should be used only if none of the above solutions 
+work for you.
+
+They are listed roughly in chronological order.
+
+"Beat That ClearFix", a clearfix for modern browsers
+Thierry Koblentz' of CSS Mojo has pointed out that when targeting modern browsers, we can now drop the zoom 
+and ::before property/values and simply use:
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+This solution does not support for IE 6/7 …on purpose!
+
+Thierry also offers: "A word of caution: if you start a new project from scratch, go for it, but don’t 
+swap this technique with the one you have now, because even though you do not support oldIE, your existing rules 
+prevent collapsing margins."
+
+Micro Clearfix
+The most recent and globally adopted clearfix solution, the Micro Clearfix by Nicolas Gallagher.
+
+Known support: Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+
+
+.container::before, .container::after {
+  content: "";
+  display: table;
+}
+.container::after {
+  clear: both;
+}
+.container {
+  zoom: 1;
+}
+Overflow Property
+This basic method is preferred for the usual case, when positioned content will not show outside the bounds of the container.
+
+http://www.quirksmode.org/css/clearing.html - explains how to resolve common issues related to this technique, namely, 
+setting width: 100% on the container.
+
+.container {
+  overflow: hidden;
+  display: inline-block;
+  display: block;
+}
+Rather than using the display property to set "hasLayout" for IE, other properties can be used for triggering 
+"hasLayout" for an element.
+
+.container {
+  overflow: hidden;
+  zoom: 1;
+  display: block;
+}
+Another way to clear floats using the overflow property is to use the underscore hack. IE will apply the values prefixed 
+with the underscore, other browsers will not. The zoom property triggers hasLayout in IE:
+
+.container {
+  overflow: hidden;
+  _overflow: visible; /* for IE */
+  _zoom: 1; /* for IE */
+}
+While this works... it is not ideal to use hacks.
+
+PIE: Easy Clearing Method
+This older "Easy Clearing" method has the advantage of allowing positioned elements to hang outside the bounds of the 
+container, at the expense of more tricky CSS.
+
+This solution is quite old, but you can learn all about Easy Clearing on Position Is Everything: 
+http://www.positioniseverything.net/easyclearing.html
+
+Element using "clear" property
+The quick and dirty solution (with some drawbacks) for when you’re quickly slapping something together:
+
+<br style="clear: both" /> <!-- So dirty! -->
+Drawbacks
+It's not responsive and thus may not provide the desired effect if layout styles change based upon media queries. 
+A solution in pure CSS is more ideal.
+It adds html markup without necessarily adding any semantic value.
+It requires a inline definition and solution for each instance rather than a class reference to a single solution 
+of a “clearfix” in the css and class references to it in the html.
+It makes code difficult to work with for others as they may have to write more hacks to work around it.
+In the future when you need/want to use another clearfix solution, you won't have to go back and remove 
+every <br style="clear: both" /> tag littered around the markup.
 
 
+###############################################################################################
+###############################################################################################
 
 
+Bootstrap
+Getting bootstrap
+http://getbootstrap.com/getting-started/
+http://v4-alpha.getbootstrap.com/getting-started/introduction/
+
+Examples
+http://getbootstrap.com/getting-started/#examples
+http://getbootstrap.com/examples/theme/
+https://getbootstrap.com/docs/3.3/examples/theme/
+
+Best Web resources for Bootstrap
+http://www.bootply.com/
+http://www.layoutit.com/
+https://www.boottheme.com/
+https://bootswatch.com/
+http://www.plugolabs.com/twitter-bootstrap-button-generator/
+http://bootsnipp.com/buttons
+
+Bootstrap Starter Template with CDN
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+###############################################################################################
+###############################################################################################
 
 
 

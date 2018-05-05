@@ -10,10 +10,15 @@ div{
 	margin:5px;
 	padding: 5px;
 	background:pink;
-	
 }
+/*clearFix to get div keep size of floated elements*/
+div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/*clerFixEnd end*/
 .inside{
-
 	padding:5px;
 	background:#f9fafc;
 	display:inline-block;
