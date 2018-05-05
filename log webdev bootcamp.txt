@@ -489,6 +489,7 @@ Many fonts only have 400 and 700 weights available. Available weights may vary f
 
 ###############################################################################################
 
+letter-spacing: 0.2rem;
 line-height: normal | 2.5 | 3em | 150% | 32px
 
 Prefer unitless numbers for line-height values
