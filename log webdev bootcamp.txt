@@ -716,19 +716,121 @@ Bootstrap Starter Template with CDN
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" 
+integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   </head>
   <body>
     <h1>Hello, world!</h1>
 
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" 
+integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   </body>
 </html>
 
 ###############################################################################################
+
+container - Containers are the most basic layout element in Bootstrap and are required when using our default grid 
+system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width 
+(meaning it’s 100% wide all the time).
+
+jumbotron - bootstrap container - taking 100% of parent size, a lightweight, flexible component that can optionally 
+extend the entire viewport to showcase key marketing messages on your site.
+
 ###############################################################################################
+
+forms
+form-group - .form-group class is the easiest way to add some structure to forms. It provides a flexible class 
+that encourages proper grouping of labels, controls, optional help text, and form validation messaging.  
+
+form-control - Textual form controls—like <input>s, <select>s, and <textarea>s—are styled with it. Included are styles 
+for general appearance, focus state, sizing, and more.
+
+<div class="form-group">
+	<label for="exampleInputPassword1">Password</label>
+	<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+</div>
+
+Inline forms
+Use the .form-inline class to display a series of labels, form controls, and buttons on a single horizontal row. 
+Form controls within inline forms vary slightly from their default states.
+
+###############################################################################################
+
+!!!to make hamburger button working - first add jQuery only than js script
+
+navbar
+Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl} for responsive collapsing and color scheme classes.
+Navbars and their contents are fluid by default. Use optional containers to limit their horizontal width.
+Use our spacing and flex utility classes for controlling spacing and alignment within navbars.
+Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our 
+Collapse JavaScript plugin.
+Navbars are hidden by default when printing. Force them to be printed by adding .d-print to the .navbar. See the display 
+utility class.
+Ensure accessibility by using a <nav> element or, if using a more generic element such as a <div>, add a role="navigation" 
+to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
+
+Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+
+.navbar-brand - can be applied to most elements, but an anchor works best as some elements might require utility classes 
+or custom styles. for your company, product, or project name.
+
+.navbar-nav - Navbar navigation links build on our .nav options with their own modifier class and require the use of toggler 
+classes for proper responsive styling. Navigation in navbars will also grow to occupy as much horizontal space as possible to 
+keep your navbar contents securely aligned. Active states—with .active—to indicate the current page can be applied directly 
+to .nav-links or their immediate parent .nav-items. for a full-height and lightweight navigation (including support for dropdowns).
+
+.navbar-toggler - for use with our collapse plugin and other navigation toggling behaviors.
+
+.form-inline - for any form controls and actions.
+
+.navbar-text - for adding vertically centered strings of text.
+
+.collapse.navbar-collapse - for grouping and hiding navbar contents by a parent breakpoint.
+
+
+Color schemes
+Theming the navbar has never been easier thanks to the combination of theming classes and background-color utilities. Choose from 
+.navbar-light for use with light background colors, or .navbar-dark for dark background colors. Then, customize with .bg-* utilities.
+
+
+it’s not required, you can wrap a navbar in a .container to center it on a page or add one within to only center the contents 
+of a fixed or static top navbar.
+
+
+Placement
+Use our position utilities to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied 
+to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use position: fixed, meaning they’re 
+pulled from the normal flow of the DOM and may require custom CSS (e.g., padding-top on the <body>) to prevent overlap with other 
+elements.
+Also note that .sticky-top uses position: sticky, which isn’t fully supported in every browser.
+
+
+Responsive behaviors
+Navbars can utilize .navbar-toggler, .navbar-collapse, and .navbar-expand{-sm|-md|-lg|-xl} classes to change when their content
+ collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
+
+For navbars that never collapse, add the .navbar-expand class on the navbar. For navbars that always collapse, don’t add any 
+.navbar-expand class.
+
+Toggler
+Navbar togglers are left-aligned by default, but should they follow a sibling element like a .navbar-brand, they’ll automatically 
+be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
+With no .navbar-brand shown in lowest breakpoint:
+
+###############################################################################################
+
+
+
+
+
+
+
+
+
+
+
 
 
 
