@@ -731,12 +731,19 @@ integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PA
 
 ###############################################################################################
 
+https://www.w3schools.com/bootstrap/default.asp
+
 container - Containers are the most basic layout element in Bootstrap and are required when using our default grid 
 system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width 
 (meaning it’s 100% wide all the time).
 
-jumbotron - bootstrap container - taking 100% of parent size, a lightweight, flexible component that can optionally 
+jumbotron - bootstrap container - indicates a big box for calling extra attention to some special content or information,
+taking 100% of parent size, a lightweight, flexible component that can optionally 
 extend the entire viewport to showcase key marketing messages on your site.
+
+A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+Tip: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.
+
 
 ###############################################################################################
 
@@ -821,20 +828,65 @@ With no .navbar-brand shown in lowest breakpoint:
 
 ###############################################################################################
 
+Grid
 
+place grid in container - div .container or div .container-fluid, or withou container if you need no margins and edge-to-edge design
+grid consists of div .row stuffed with divs - .col
 
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div>
 
+ - Containers provide a means to center and horizontally pad your site’s contents. Use .container for a responsive pixel width or .container-fluid 
+for width: 100% across all viewport and device sizes.
+ - Rows are wrappers for columns. Each column has horizontal padding (called a gutter) for controlling the space between them. This padding is then 
+counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
+ - In a grid layout, content must be placed within columns and only columns may be immediate children of rows.
+ - Thanks to flexbox, grid columns without a specified width will automatically layout as equal width columns. For example, four instances of .col-sm 
+will each automatically be 25% wide from the small breakpoint and up. See the auto-layout columns section for more examples.
+ -Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, 
+you can use .col-4.
+ - Column widths are set in percentages, so they’re always fluid and sized relative to their parent element.
+ - Columns have horizontal padding to create the gutters between individual columns, however, you can remove the margin from rows and padding from 
+columns with .no-gutters on the .row.
+ - To make the grid responsive, there are five grid breakpoints, one for each responsive breakpoint: all breakpoints (extra small), small, medium, 
+large, and extra large.
+ - Grid breakpoints are based on minimum width media queries, meaning they apply to that one breakpoint and all those above it (e.g., .col-sm-4 applies 
+to small, medium, large, and extra large devices, but not the first xs breakpoint).
 
+Extra small <576px     None (auto)   .col-
+Small >=576px	       540px         .col-sm-
+Medium >=768px	       720px         .col-md-
+Large >=992px	       960p          .col-lg-
+Extra large >=1200px   1140px        .col-xl-			
 
+there is no need to define each breakpoints col size, just defina sizes where change needed
 
+to benefit from auto-layout columns sizing just not skip adding number to .col
+or add only one column size like .col-6 and other .col's will be sized around this size
 
+.w-100 - breakes equal-width columns into multiple lines
+<div class="container">
+  <div class="row">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="w-100"></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
 
-
-
-
-
-
-
+###############################################################################################
 
 
 
