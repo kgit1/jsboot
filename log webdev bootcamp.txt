@@ -811,6 +811,9 @@ Use our position utilities to place navbars in non-static positions. Choose from
 to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use position: fixed, meaning they’re 
 pulled from the normal flow of the DOM and may require custom CSS (e.g., padding-top on the <body>) to prevent overlap with other 
 elements.
+example - <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+Also note that when navbar fixed - it floats over the body, so to prevent body from sliding under navbar - add padding: 70px on 
+the needed side
 Also note that .sticky-top uses position: sticky, which isn’t fully supported in every browser.
 
 
@@ -887,6 +890,38 @@ or add only one column size like .col-6 and other .col's will be sized around th
 </div>
 
 ###############################################################################################
+
+to manage margin between rows of the grid in bootstrap4
+add class like
+.top2{
+   margin-top: 2%;
+}
+and use it on .col's, or on .row's if ur .col's grouped by .row's
+
+###############################################################################################
+
+icons -> bootstrap -> documentation -> extends -> icons -> font awesome -> all icons
+to use font awesome - add
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" 
+integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+choose icon, copy code, insert where symbol needed
+<i class="fas fa-camera-retro"></i>
+to manage color, size, shadows etc - just add id, and manage it through css like
+#cam{
+	color:green;
+	font-size: 2rem;
+}
+<i class="fas fa-camera-retro" id="cam"></i>
+
+###############################################################################################
+
+
+
+
+
+
+
 
 
 
