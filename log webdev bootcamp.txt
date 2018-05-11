@@ -342,6 +342,9 @@ examples
   text-decoration: blink;
 }
 
+text-shadow: 3px 3px 5px red,
+	3px 7px 9px blue;
+
 ###############################################################################################
 
 text-align: start | end | left | right | center | justify | match-parent
