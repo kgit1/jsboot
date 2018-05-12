@@ -917,7 +917,135 @@ to manage color, size, shadows etc - just add id, and manage it through css like
 }
 <i class="fas fa-camera-retro" id="cam"></i>
 
+
 ###############################################################################################
+###############################################################################################
+
+
+JavaScript
+
+<script src="scriptDemo.js"></script>
+
+% - modulo - mod - remainder operation
+10 % 3 = 1
+
+strings concatination
+"charlie" + "brown"
+
+length property
+"Cant stop".length
+
+access individual characters using [] and index
+"hello"[2] - l 
+
+escape characters
+"she said \"goodbye!\""
+
+Open the Console panel -            Control+Shift+J
+Open whatever panel you used last - F12 or Control+Shift+I
+
+type number - console return number
+type operation - console return result
+type clear() - clear console
+
+% - modulo - mod - remainder operation
+10 % 3 = 1
+
+strings concatination
+"charlie" + "brown"
+
+length property
+"Cant stop".length
+
+access individual characters using [] and index
+"hello"[2] - l 
+
+escape characters
+"she said \"goodbye!\""
+
+###############################################################################################
+
+var - variable is a container that has a name on it and inside of this container - some data stored
+
+5 Primitive Datatypes
+Numbers
+4
+9.3
+-10
+
+Strings
+"Hello World"
+"43"
+
+Boolean
+false 
+true
+
+null and undefined
+null
+undefined
+
+###############################################################################################
+
+alert() - displays as alert data or operation provided in parentheses
+alert("Hello there")
+alert(5+5)
+
+console.log() - displays in console data or operation provided in parentheses
+console.log("Hello in console")
+
+prompt() - asks user input with message provided in parentheses
+prompt("what is your name?")
+input can be stored in var
+var userName = prompt("What is your name?") - users input will be stored to var
+
+###############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
