@@ -941,8 +941,12 @@ access individual characters using [] and index
 escape characters
 "she said \"goodbye!\""
 
-Open the Console panel -            Control+Shift+J
-Open whatever panel you used last - F12 or Control+Shift+I
+Ctrl+Shift+J - Open the Console panel -            
+Ctrl+Shift+I or F12 - Open whatever panel you used last 
+Ctrl+l - clear console
+Ctrl+Mouse scroll - resize console
+Shift+Enter - next line in console
+
 
 type number - console return number
 type operation - console return result
@@ -963,6 +967,10 @@ access individual characters using [] and index
 escape characters
 "she said \"goodbye!\""
 
+expression - 1+1
+statement, instruction - 1+1;
+; means end of something
+
 ###############################################################################################
 
 var - variable is a container that has a name on it and inside of this container - some data stored
@@ -981,9 +989,25 @@ Boolean
 false 
 true
 
-null and undefined
-null
 undefined
+
+null
+0 - if converted to number
+"null" if converted to string
+
+false, 0, "", null, undefined, NaN - always = false, everything else = true
+in operation with && if left part = false - condition instantly =  false, without cheking right part
+in condition with || if left part = true - condition instantly = true, without cheking right part
+
+typeof - to check var or data type
+typeof 10, typeof username, typeof "Cartman" etc
+
+typeof NaN - returns "number" lol, so to check NaN we have
+isNaN() method
+
+we can divide by zero in javascript
+5/0 = Infinite
+isFinite() - to chech is number Finite or Infinite
 
 ###############################################################################################
 
@@ -996,28 +1020,121 @@ console.log("Hello in console")
 
 prompt() - asks user input with message provided in parentheses
 prompt("what is your name?")
+
 input can be stored in var
+var name cant begins with number
+
 var userName = prompt("What is your name?") - users input will be stored to var
+input is a string
+if we need number for some boolean manipulations - convert input to number by Number(value)
+value = "5"
+Number(value) = 5
+value * 1 = 5
++ value = 5
+
+to convert number back to string
+String(value) = "5"
+value + "" = "5"
+
+to convert to boolean
+Boolean(5) = true
+!!5 = true
 
 ###############################################################################################
 
+var count=0;
+var exp =10;
+var number=2;
+var result=1;
+console.log("While_______________________________");
+while(count<exp){
+	result*=number;
+	console.log(count+": " +result);
+	count++;
+}
 
+console.log("For_______________________________");
+result=1;
+for(var i=0;i<exp;i++){
+	result*=number;
+	console.log(i+": "+result);
+}
 
+console.log("Do While_______________________________");
+result=1;
+count=20;
+exp=19;
+do{
+	result*=number;
+console.log(count+": "+result);
+}while(count<exp);
 
+var answer="stop";
+var input="";
+do{
+	input=prompt("Say stop");
+	console.log("Say stop: - "+input);
+}while(input!=answer);
 
+console.log("Switch_______________________________");
+var x =2;
+switch(2){
+case 1: "One"; break;
+case 2: "Two"; break;
+case 3: "Three"; break;
+default: "......";
+}
 
+###############################################################################################
 
+ternary operator
 
+var x=1, y;
+y=(x==1)?"One":"Not One";
 
+same as
 
+if(x==1){
+y="One";
+}else{
+y="Not One";
+}
 
+###############################################################################################
 
+continue operator - skips cycles turn and goes straight on next turn
+for(var i =0;i<30;i++){
+	if(i % 3 != 0){
+		continue; //skips cycles turn operations here if i not divisible by 3 without reminder
+	}
+	console.log(i);
+}
 
+break operator - breaks cycle completely and continues with operations after cycle
 
+for(var i =0;i<30;i++){
+	if(i % 3 != 0){
+		continue; //skips cycles turn operations here if i not divisible by 3 without reminder
+	}
+	console.log(i);
+	break; //breaks cycle completely and continues with operations after cycle
+}
 
+label: operator - after contine or break - skips turn or finishes completely not cycle in which continue 
+or break situates - but cycle labeled with this label:
+for label any world followed with colons can be used
 
+label: while(){
+	for(var i =0;i<30;i++){
+		if(i % 3 != 0){
+			continue; //skips cycles turn operations here if i not divisible by 3 without reminder
+		}
+		console.log(i);
+		break label; //breaks labeled cycle completely and continues with operations after labeled cycle
+	}
+}
 
-
+###############################################################################################
 
 
 
