@@ -46,7 +46,6 @@ to install plugin - preferences ->packege control -> put plugin there
 ###############################################################################################
 ###############################################################################################
 
-
 mdm elements reference - to look at all html elements description
 <div>div</div> - container helping group content together, block element
 <span>span</span> - container to, but inline element
@@ -56,7 +55,6 @@ mdm elements reference - to look at all html elements description
 
 ###############################################################################################
 ###############################################################################################
-
 
 lists
 ordered list
@@ -90,7 +88,6 @@ Allows you to use a custom image for the bullet, rather than a simple square or 
 
 ###############################################################################################
 ###############################################################################################
-
 
 by default in links used file protocol, to use local resources,
 and to point link to outside add "http://" at the begining of href
@@ -183,7 +180,6 @@ to mark up a header, footer, and body section for the table.
 ###############################################################################################
 ###############################################################################################
 
-
 <form></form> - shell container around inputs to submit them together
 <form action="/my-form-submiting-page" method="post">
 <!-- All input fields -->
@@ -257,7 +253,6 @@ name,required,disabled,autofocus
 ###############################################################################################
 ###############################################################################################
 
-
 forms validation with html attributes
 
 minlength
@@ -305,7 +300,6 @@ as some people write their area code in parentheses, but it works for a simple d
 ###############################################################################################
 ###############################################################################################
 
-
 CSS - Cascade Style Sheet
 http://www.csszengarden.com/
 https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
@@ -316,6 +310,7 @@ background: url();
 background-repeat: no-repeat;
 background-size:cover;
 }
+
 
 ###############################################################################################
 
@@ -345,6 +340,7 @@ examples
 text-shadow: 3px 3px 5px red,
 	3px 7px 9px blue;
 
+
 ###############################################################################################
 
 text-align: start | end | left | right | center | justify | match-parent
@@ -355,7 +351,6 @@ text-align does not control the alignment of block elements, only their inline c
 
 ###############################################################################################
 ###############################################################################################
-
 
 Selectors
 Descendant - one selector inside another
@@ -385,7 +380,6 @@ color:green;
 
 ###############################################################################################
 ###############################################################################################
-
 
 pseudoclasses - used to act when element is in scecific state
 pseudoelements - used to work with certain area of element
@@ -456,7 +450,6 @@ by the user (such as with the mouse).
 ###############################################################################################
 ###############################################################################################
 
-
 Fonts
 https://fonts.google.com - fonts here
 https://www.cssfontstack.com/ - a complete collection of web safe CSS font stacks
@@ -501,12 +494,14 @@ font-size: inherit;
 font-size: initial;
 font-size: unset;
 
+
 ###############################################################################################
 
 font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
 bold is equivalent to 700
 normal is equivalent to  400
 Many fonts only have 400 and 700 weights available. Available weights may vary font-to-font.
+
 
 ###############################################################################################
 
@@ -518,9 +513,11 @@ CSS property sets the amount of space used for lines, such as in text. On block-
 it specifies the minimum height of line boxes within the element. On non-replaced inline elements, 
 it specifies the height that is used to calculate line box height.
 
+
 ###############################################################################################
 
 font-style: normal | italic | oblique
+
 
 ###############################################################################################
 
@@ -553,7 +550,6 @@ font-variant-alternates, font-variant-ligatures, and font-variant-east-asian
 
 ###############################################################################################
 ###############################################################################################
-
 
 div -> float related problem - div doesnt inherit floated elements size
 
@@ -690,7 +686,6 @@ every <br style="clear: both" /> tag littered around the markup.
 ###############################################################################################
 ###############################################################################################
 
-
 Bootstrap
 Getting bootstrap
 http://getbootstrap.com/getting-started/
@@ -732,6 +727,7 @@ integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PA
   </body>
 </html>
 
+
 ###############################################################################################
 
 https://www.w3schools.com/bootstrap/default.asp
@@ -765,6 +761,7 @@ for general appearance, focus state, sizing, and more.
 Inline forms
 Use the .form-inline class to display a series of labels, form controls, and buttons on a single horizontal row. 
 Form controls within inline forms vary slightly from their default states.
+
 
 ###############################################################################################
 
@@ -832,6 +829,7 @@ Navbar togglers are left-aligned by default, but should they follow a sibling el
 be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
 With no .navbar-brand shown in lowest breakpoint:
 
+
 ###############################################################################################
 
 Grid
@@ -892,6 +890,7 @@ or add only one column size like .col-6 and other .col's will be sized around th
   </div>
 </div>
 
+
 ###############################################################################################
 
 to manage margin between rows of the grid in bootstrap4
@@ -900,6 +899,7 @@ add class like
    margin-top: 2%;
 }
 and use it on .col's, or on .row's if ur .col's grouped by .row's
+
 
 ###############################################################################################
 
@@ -920,7 +920,6 @@ to manage color, size, shadows etc - just add id, and manage it through css like
 
 ###############################################################################################
 ###############################################################################################
-
 
 JavaScript
 
@@ -971,6 +970,7 @@ expression - 1+1
 statement, instruction - 1+1;
 ; means end of something
 
+
 ###############################################################################################
 
 var - variable is a container that has a name on it and inside of this container - some data stored
@@ -1009,6 +1009,7 @@ we can divide by zero in javascript
 5/0 = Infinite
 isFinite() - to chech is number Finite or Infinite
 
+
 ###############################################################################################
 
 alert() - displays as alert data or operation provided in parentheses
@@ -1039,6 +1040,7 @@ value + "" = "5"
 to convert to boolean
 Boolean(5) = true
 !!5 = true
+
 
 ###############################################################################################
 
@@ -1085,6 +1087,7 @@ case 3: "Three"; break;
 default: "......";
 }
 
+
 ###############################################################################################
 
 ternary operator
@@ -1099,6 +1102,7 @@ y="One";
 }else{
 y="Not One";
 }
+
 
 ###############################################################################################
 
@@ -1134,33 +1138,371 @@ label: while(){
 	}
 }
 
+
+###############################################################################################
+
+functions in js is a type of data
+function x(){} - function declaration
+function(){}; - instruction of function expression, anonymous function
+var x = function(){}; - anonymous function assign
+function declaration can be anywhere before, or after call, but
+function expression can be only before call
+
+x() - means execute x
+x - container of function data type
+typeof x -> "function"
+typeof x() -> "undefined"
+
+every function have return
+if return isnt writed in function, there is still hidden return which returns -> undefined
+
+function as data type can be assigned and returned
+function outer(){
+	function inner(x){
+		console.log(x);
+	}
+return inner;
+}
+var x = outer();//result of outer execution(function inner) assigned to var x
+x("Hello");//now is is used as function - execution called by parenthessies
+//"Hello" in output
+
+
+concealed function for immediately call
+
+()();like this
+(function(a,b){console.log(a,b);})();
+
+###############################################################################################
+
+closure(zamikanie) - inner function holds outside variable inside
+"closure is a record storing a function[a] together with an environment"
+
+function say(greet){
+	return function(name){
+		return greet+" "+name;
+	}
+}
+var en = say("Hello");//here anonymous function holds "Hello" inside
+var fr = say("Bonjour");//here anonymouse function holds " Bonjour" inside
+
+console.log(en("Piter"));//Hello Piter
+console.log(fr("Jean"));//Bonjour Jan
+
+//chain function calling - console.log(say("Hello")("Piter"));
+//go in console.log -> execute say("Hello") -> got anonymous function on 
+its place -> execute it with("Piter")
+
+
+###############################################################################################
+
+object
+objects variables - are properties, not usual variables like global or local
+
+var user ={};//variable type object created
+dot notation - to call objects property  
+user.name = "John";//objects property added
+user.age = 25;//objects property added
+or 
+var user={name:"John", age:25};
+
+objects property's name can contain space, can be reserved word or number
+all objects properties names are strings(so object is map?)
+var user={"user name":"John", var:10, 2:true};
+
+bracket notation - to call unusual propnames
+user["user name"];
+user["var"];
+user[2]; or even usr[1+1];
+
+objects functions
+user.say:function(word){
+	console.log(word + " from " + this.name);
+}
+
+call
+user.say("Hello");
+
+
+###############################################################################################
+
+to check props presence in object
+method in
+"user name" in user;//true
+ 
+
+to delete object property
+method delete
+delete user.name; or delete user["user name"];
+
+to cycle objects properties
+method for in - cycles through objects propnames
+for(var i in user){
+	console.log(i);//properties names
+	console.log(user[i]);//properties values
+}
+or
+
+Object.keys() - array of object properties names
+Object.values() - array of objects properties values
+
+Object.keys(user).forEach(function(element,index){
+
+console.log(element);
+//properties names
+console.log("--------------------------------");
+
+console.log(user[element]);
+//properties values
+});
+
+//for loop example with arr.length called once for better performance
+for (var i=0, n=arr.length; i < n; i++){}
+
+
+###############################################################################################
+
+binding objects context for use in inner function
+
+var o = {
+	param:10,
+	method:function(){
+		var self1 = this;//bind this context(this) to local var
+		function test(){
+			console.log(self1.param);	
+		}
+		test();
+	}
+
+};
+o.method();
+
+
+###############################################################################################
+
+functions props
+
+call
+calls standalone function using object and its props
+apply - same as call but can take array of arguments
+
+function someFunction(){
+	console.log(this.name);
+}
+someFunction.call(user);
+or
+
+function someFunction(a, b){
+	console.log(this.name);
+}
+someFunction.call(user, a, b);
+or
+
+function someFunction(a, b){
+	console.log(this.name);
+}
+someFunction.apply(user, [a, b]);
+
+function print(){
+	console.log.apply(console, arguments);
+}
+
+length - returns number of function arguments
+
+arguments - contains actually given arguments, object as collection
+argument.length - returns number of actually given arguments
+argument[2] - returns 3rd of actually given arguments
+
+var o = {
+	
+	param:10,
+	
+	method:function(a,b,c,d){
+		
+		var self1 = this;//bind this context(this) to local var
+		
+		function test(a,b){
+			
+			console.log(self1.param);
+			
+			console.log("length: "+test.length);	
+			
+			console.log("arguments: "+test.arguments);
+			
+			console.log("argumentsLength: "+test.arguments.length);
+			
+			console.log("argument[2]: "+test.arguments[2]);
+		
+			}
+		
+		test(a,b,c,d);
+	
+		}
+
+
+};
+
+o.method(1,2,3,4,5);
+
+
+###############################################################################################
+
+array - build-in object type
+
+var arr = [];
+var arr = [10,"john",true];
+
+use push/pop, unshift/shift, slice/splice, join/concat
+
+push/pop faster than unshift/shift
+for faster x10-x100times in modern browsers
+dont add props to array because intepretator starts treat it like an object
+dont arr.neProp ="x";
+dont add elements to array in wrong order because intepretator starts treat it like an object
+dont arr[1]=2; arr[20]=5;
+
+
+arr.push("Maria");//add element to the end of the array
+arr.push("Maria","Broo");//add elements to the end of the array
+arr.pop("Maria");//removes last element of the array and returns it
+
+arr.unshift("Maria");//add element to the begining of the array
+arr.unshift("Maria","Broo");//add elements to the begining of the array
+arr.shift("Maria");//removes first element of the array and returns it
+arr[5] = "Bill";//add element to the index
+
+
+arr.length;//array length
+arr.length = 3;//cut or extend arrya to 3 elements
+
+
+for(var i=0;i<arr.length;i++){
+	console.log(arr[i]);//output every member including undefined
+}
+
+for(var i in arr){
+	console.log(arr.[i]);//output only defined members
+}
+
+
+array to string
+var string = arr.toString();
+var string = arr.join();
+var string = arr.join("--");
+
+
+array+array - creates new array
+var arr3=arr1.concat(arr2);
+var arr3=arr1.concat(number,arr2);
+var arr3=arr1.concat(1,[3,4,5]);
+var arr3=arr1.concat(arr2,arr4);
+
+var arr3=arr1+arr2;//will concat arrays but unite last element of first with first member of second
+
+
+slice array - creates new array 
+var arr1 = [1, 5, 7, 12, 9];
+var arr2 = arr1.slice(2);//[7, 12, 9] - elements after index 2
+var arr2 = arr1.slice(1,3);//[5, 7 ] - elements between index 1 and 3 not including 3
+var arr2 = arr1.slice(-3,-1);//[7,12] - slice from behind - last element index=-1, prelast =-2 etc
+var arr2 = arr1.slice(2,1);//[]
+
+
+splice array
+var arr1 = [1, 5, 7, 12, 9];
+var arr2 = arr1.splice(1,2);//[5, 7] - from index 1 - remove 2 elements and return them
+arr1;//[1, 12, 9] - elements removed from old array
+var arr2 = arr1.splice(1, 0, 2); - from index 1 - remove 0 elements and put 3 before index 1
+
+
+reverse array
+var array2=array1.reverse();
+
+
+sort array
+var arr2=arr1.sort();//sorts as strings
+var arr2=arr1.sort(function(a,b){return a-b;});//own comparator sorts as numbers asc
+var arr2=arr1.sort(function(a,b){return b-a;});//own comparator sorts as numbers desc
+
+
+###############################################################################################
+
+Math - Math is a built-in object that has properties and methods for mathematical constants 
+and functions.
+
+props - PI, E, LN2, LN10, LOG2E etc
+methods - pow(),sqrt(),log(),exp()
+	  ceil(), floor(), round(), max(), min(), random()
+	  sin(), asin(), cos(), ascos(), tan(), atan()
+
+trigonometric functions (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) expect or return 
+angles in radians. To convert radians to degrees, divide by (Math.PI / 180), and multiply by this 
+to convert the other way.
+
+var arr1 = [5,12];
+var arr2 =[];
+arr1[99]=7;
+
+for(var i =0;i<arr1.length;i++){
+	if(arr1[i]){
+		arr2.push(Math.pow(arr1[i],2));
+	}
+}
+or
+
+for(var i in arr1){
+	arr2.push(Math.pow(arr1[i],2));
+}
+
+
+Math.min(1,2,3,4,5,7,8,9);
+or with array using apply() method
+
+Math.min.apply(Math, [1,2,3,4,5,7,8,9]);
+
+
+###############################################################################################
+
+wrong(using closure)
+function foo(){
+	var arrr=[];
+	for(var i=0;i<3;i++){
+		a.puch(function(){console.log(i)});//function hold ref to i	
+	}
+return arr;
+}
+
+var result = foo();
+result[0]();//3
+result[1]();//3
+result[2]();//3
+
+write(using closure wrapped inside immediately called function)
+function foo(){
+	var arr=[];	
+		for(var i=0;i<3;i++){
+			(function(i){
+				arr.push(function(){console.log(i)});//function hold ref to i	
+			})(i);
+		}
+return arr;
+}
+
+var result = foo();
+result[0]();//0
+result[1]();//1
+result[2]();//2
+
 ###############################################################################################
 
 
+forEach - returns nothing
+var numbers =[1,2,3];
+nums.forEach(function(value){console.log(value*10);});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+map - returns new array with new values
+var numbers =[1,2,3];
+nums.map(function(value){return value*10;});
 
 
 
