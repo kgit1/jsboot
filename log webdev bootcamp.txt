@@ -42,9 +42,9 @@ You can also add this command to userKeyBindings:
 to install plugin - preferences ->packege control -> put plugin there
 (C:\Users\user_name\AppData\Roaming\Sublime Text 3\Packages)
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 mdm elements reference - to look at all html elements description
 <div>div</div> - container helping group content together, block element
@@ -52,9 +52,9 @@ mdm elements reference - to look at all html elements description
 <strong>strong</strong>(old<b></b>) - for strong letters
 <em>emphasise</em>(old<i></i>) - for italic
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 lists
 ordered list
@@ -85,9 +85,9 @@ Sets whether the bullets appear inside the list items, or outside them before th
 list-style-image: url(), none
 Allows you to use a custom image for the bullet, rather than a simple square or circle.
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 by default in links used file protocol, to use local resources,
 and to point link to outside add "http://" at the begining of href
@@ -176,9 +176,9 @@ As your tables get a bit more complex in structure, it is useful to give them mo
 definition. One clear way to do this is by using <thead>, <tfoot>, and <tbody>, which allow you 
 to mark up a header, footer, and body section for the table.
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 <form></form> - shell container around inputs to submit them together
 <form action="/my-form-submiting-page" method="post">
@@ -249,9 +249,9 @@ name,required,disabled,autofocus
 
 <textarea rows="10" cols="20"></textarea> - text area for multiline input needs
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 forms validation with html attributes
 
@@ -296,9 +296,9 @@ as some people write their area code in parentheses, but it works for a simple d
   <button>Submit</button>
 </form>
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 CSS - Cascade Style Sheet
 http://www.csszengarden.com/
@@ -311,8 +311,8 @@ background-repeat: no-repeat;
 background-size:cover;
 }
 
-
 ###############################################################################################
+
 
 text-decoration:
 formal syntax = text-decoration-line || text-decoration-style || text-decoration-color
@@ -340,17 +340,17 @@ examples
 text-shadow: 3px 3px 5px red,
 	3px 7px 9px blue;
 
-
 ###############################################################################################
+
 
 text-align: start | end | left | right | center | justify | match-parent
 
 CSS property describes how inline content like text is aligned in its parent block element. 
 text-align does not control the alignment of block elements, only their inline content.
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 Selectors
 Descendant - one selector inside another
@@ -377,9 +377,9 @@ ul:nth-of-type(3){
 color:green;
 }
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 pseudoclasses - used to act when element is in scecific state
 pseudoelements - used to work with certain area of element
@@ -446,9 +446,9 @@ by the user (such as with the mouse).
   background: cyan;
 }
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 Fonts
 https://fonts.google.com - fonts here
@@ -494,16 +494,16 @@ font-size: inherit;
 font-size: initial;
 font-size: unset;
 
-
 ###############################################################################################
+
 
 font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit
 bold is equivalent to 700
 normal is equivalent to  400
 Many fonts only have 400 and 700 weights available. Available weights may vary font-to-font.
 
-
 ###############################################################################################
+
 
 letter-spacing: 0.2rem;
 line-height: normal | 2.5 | 3em | 150% | 32px
@@ -513,11 +513,10 @@ CSS property sets the amount of space used for lines, such as in text. On block-
 it specifies the minimum height of line boxes within the element. On non-replaced inline elements, 
 it specifies the height that is used to calculate line box height.
 
-
 ###############################################################################################
 
-font-style: normal | italic | oblique
 
+font-style: normal | italic | oblique
 
 ###############################################################################################
 
@@ -547,9 +546,9 @@ where
 CSS property is a shorthand for the longhand properties font-variant-caps, font-variant-numeric, 
 font-variant-alternates, font-variant-ligatures, and font-variant-east-asian
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 div -> float related problem - div doesnt inherit floated elements size
 
@@ -682,9 +681,9 @@ It makes code difficult to work with for others as they may have to write more h
 In the future when you need/want to use another clearfix solution, you won't have to go back and remove 
 every <br style="clear: both" /> tag littered around the markup.
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 Bootstrap
 Getting bootstrap
@@ -727,8 +726,8 @@ integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PA
   </body>
 </html>
 
-
 ###############################################################################################
+
 
 https://www.w3schools.com/bootstrap/default.asp
 
@@ -743,8 +742,8 @@ extend the entire viewport to showcase key marketing messages on your site.
 A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
 Tip: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.
 
-
 ###############################################################################################
+
 
 forms
 form-group - .form-group class is the easiest way to add some structure to forms. It provides a flexible class 
@@ -762,8 +761,8 @@ Inline forms
 Use the .form-inline class to display a series of labels, form controls, and buttons on a single horizontal row. 
 Form controls within inline forms vary slightly from their default states.
 
-
 ###############################################################################################
+
 
 !!!to make hamburger button working - first add jQuery only than js script
 
@@ -829,8 +828,8 @@ Navbar togglers are left-aligned by default, but should they follow a sibling el
 be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
 With no .navbar-brand shown in lowest breakpoint:
 
-
 ###############################################################################################
+
 
 Grid
 
@@ -890,8 +889,8 @@ or add only one column size like .col-6 and other .col's will be sized around th
   </div>
 </div>
 
-
 ###############################################################################################
+
 
 to manage margin between rows of the grid in bootstrap4
 add class like
@@ -900,8 +899,8 @@ add class like
 }
 and use it on .col's, or on .row's if ur .col's grouped by .row's
 
-
 ###############################################################################################
+
 
 icons -> bootstrap -> documentation -> extends -> icons -> font awesome -> all icons
 to use font awesome - add
@@ -917,9 +916,9 @@ to manage color, size, shadows etc - just add id, and manage it through css like
 }
 <i class="fas fa-camera-retro" id="cam"></i>
 
+###############################################################################################
+###############################################################################################
 
-###############################################################################################
-###############################################################################################
 
 JavaScript
 
@@ -970,8 +969,8 @@ expression - 1+1
 statement, instruction - 1+1;
 ; means end of something
 
-
 ###############################################################################################
+
 
 var - variable is a container that has a name on it and inside of this container - some data stored
 
@@ -1009,8 +1008,8 @@ we can divide by zero in javascript
 5/0 = Infinite
 isFinite() - to chech is number Finite or Infinite
 
-
 ###############################################################################################
+
 
 alert() - displays as alert data or operation provided in parentheses
 alert("Hello there")
@@ -1041,8 +1040,90 @@ to convert to boolean
 Boolean(5) = true
 !!5 = true
 
+string to number
+parseInt("3432adsf");//3432
+parseInt("FF", 16);//255 - parse hex number
+number.toString(16);//number to hex number in string 
+parseFloat("2134.34trrg");//2134.34
+
+cut string
+slice can work with negative - counting from the end
+substring will swith numbers if first is bigger
+var string = "Hello world".slice(6);//world
+var string = "Hello world".substring(6);//world
+var string = "Hello world".slice(3,6);//lo
+var string = "Hello world".substring(3,6);//lo
+
+find substring
+var index="Hello world".indexOf("o");//4
+var index="Hello world".indexOf("o",5);//7
+
+var index="Hello world".lastIndexOf("o");//7
+var index="Hello world".lastIndexOf("o",5);//4
+
+replace substring
+var string2=string1.replace("blue","red");
+
+split string to array
+var arr=string.split("");//split by elements
+var arr=string.split(" ");//split by spaces
+var arr=string.split(" ",2);//split by spaces but create array only from first 2 elements
+
+examples
+var string = "We know that monochrome is a type of grey";
+
+
+var example="chrome";
+
+
+
+var result;
+
+
+var exampleIndex=string.indexOf(example);
+if(exampleIndex != -1){
+
+	var start = string.lastIndexOf(" ",exampleIndex)+1;
+
+	var end = string.indexOf(" ",exampleIndex);
+
+	if(end != -1){
+		result=string.substring(start,end);
+
+	}else{
+		result=string.substring(start);
+	}
+}
+
+result;//"monochrome"
+
+
+function alphabet(startIndex,chars){
+	var startIndex=97;
+	var alphabet="";
+
+	for(var i=0;i<chars;i++){
+		alphabet+=String.fromCharCode(startIndex+i);
+	}
+	return alphabet;
+}
+or
+
+function charToString(index){
+	return String.fromCharCode(97+index);
+}
+
+function buildString(chars,callback){
+	var result="";
+	for(var i=0;i<chars;i++){
+		result+=callback(i);
+	}
+	return result;
+}
+buildString(26,charToString);
 
 ###############################################################################################
+
 
 var count=0;
 var exp =10;
@@ -1087,8 +1168,8 @@ case 3: "Three"; break;
 default: "......";
 }
 
-
 ###############################################################################################
+
 
 ternary operator
 
@@ -1103,8 +1184,8 @@ y="One";
 y="Not One";
 }
 
-
 ###############################################################################################
+
 
 continue operator - skips cycles turn and goes straight on next turn
 for(var i =0;i<30;i++){
@@ -1138,8 +1219,9 @@ label: while(){
 	}
 }
 
-
 ###############################################################################################
+###############################################################################################
+
 
 functions in js is a type of data
 function x(){} - function declaration
@@ -1175,6 +1257,7 @@ concealed function for immediately call
 
 ###############################################################################################
 
+
 closure(zamikanie) - inner function holds outside variable inside
 "closure is a record storing a function[a] together with an environment"
 
@@ -1193,8 +1276,9 @@ console.log(fr("Jean"));//Bonjour Jan
 //go in console.log -> execute say("Hello") -> got anonymous function on 
 its place -> execute it with("Piter")
 
-
 ###############################################################################################
+###############################################################################################
+
 
 object
 objects variables - are properties, not usual variables like global or local
@@ -1223,8 +1307,8 @@ user.say:function(word){
 call
 user.say("Hello");
 
-
 ###############################################################################################
+
 
 to check props presence in object
 method in
@@ -1259,8 +1343,8 @@ console.log(user[element]);
 //for loop example with arr.length called once for better performance
 for (var i=0, n=arr.length; i < n; i++){}
 
-
 ###############################################################################################
+
 
 binding objects context for use in inner function
 
@@ -1277,8 +1361,8 @@ var o = {
 };
 o.method();
 
-
 ###############################################################################################
+
 
 functions props
 
@@ -1344,8 +1428,9 @@ var o = {
 
 o.method(1,2,3,4,5);
 
-
 ###############################################################################################
+###############################################################################################
+
 
 array - build-in object type
 
@@ -1424,8 +1509,8 @@ var arr2=arr1.sort();//sorts as strings
 var arr2=arr1.sort(function(a,b){return a-b;});//own comparator sorts as numbers asc
 var arr2=arr1.sort(function(a,b){return b-a;});//own comparator sorts as numbers desc
 
-
 ###############################################################################################
+
 
 Math - Math is a built-in object that has properties and methods for mathematical constants 
 and functions.
@@ -1461,7 +1546,15 @@ or with array using apply() method
 Math.min.apply(Math, [1,2,3,4,5,7,8,9]);
 
 
+Number.MAX_VALUE
+Number.MIN_VALUE
+
+number precision
+var number = 12123.4544534
+number.toFixed(2)//12123.45
+
 ###############################################################################################
+
 
 wrong(using closure)
 function foo(){
@@ -1504,6 +1597,118 @@ map - returns new array with new values
 var numbers =[1,2,3];
 nums.map(function(value){return value*10;});
 
+###############################################################################################
+###############################################################################################
+
+
+regex - regular expressions
+
+var regex =/../;
+var string = "...";
+
+regex.test(string);
+string.search(regexp);
+
+"test@yahoo.com".search(/@/);//5
+"test@yahoo.com".search(/gmail|aol|hotmail/);//-1
+
+/@/.test("test@yahoo.com");//true
+/gmail|aol|hotmail/.search("test@yahoo.com");//false
+
+^ - string must start from regex, no other chars before
+$ - string must ends with regex, no other chars after
+i - after regex = ignore case
+m - after regex = multiline; treat beginning and end characters (^ and $) as working over multiple lines (i.e., match the beginning 
+	or end of each line (delimited by \n or \r), not only the very beginning or end of the whole input string)
+g - after regex = global match; find all matches rather than stopping after the first match
+[] - for group of possible characters, without[] - regex must follow citation
+
+###############################################################################################
+
+
+/[abcde]/.test("test@yahoo.com");//is there any of abcde?
+/[abcde]/.test("test@yahoo.com");//is there no of abcde?
+/[a-z]/.test("test@yahoo.com");
+/[a-zA-Z]/.test("test@yahoo.com");
+/[0-9]/.test("test@yahoo.com");
+/[\w]/.test("test@yahoo.com");///[a-zA-Z0-9_]/
+/[\W]/.test("test@yahoo.com");///no[a-zA-Z0-9_]/
+/[\d]/.test("test@yahoo.com");///[0-9]/
+/[\D]/.test("test@yahoo.com");///no[0-9]/
+
+/./.test("test@yahoo.com");//any char
+/\./.test("test@yahoo.com");//dot
+/ab{2}c/.test("abbcd");// regex for a followed 2b followed c
+/ab{2,4}c/.test("abbbcd");// regex for a followed 2-4b followed c
+/ab?c/.test("abcd");// regex for a followed or not with b followed c
+same/ab{0,1}c/.test("abcd");// regex for a followed or not with b followed c
+/ab+c/.test("abcd");// regex for a followed with any count of b followed c
+same/ab{1,}c/.test("abcd");// regex for a followed with any count of b followed c
+/ab*c/.test("abcd");// regex for a followed or not with any count of b followed c
+same/ab{0,}c/.test("abcd");// regex for a followed or not with any count of b followed c
+
+(x) - group elements and create reference to them - eats performance
+
+(?:x) - group elements with out ref, atches x but does not remember the match. These are called non-capturing groups. The matched substring 
+cannot be recalled from the resulting array's elements [1], ..., [n] or from the predefined RegExp object's 
+properties $1, ..., $9.
+
+###############################################################################################
+
+
+/\d\d?-\d\d?-\d{4}/
+same /\d{1,2}-\d{1,2}-\d{4}/
+
+25-02-2013
+/^(?:[0-2][1-9]|^[12][0-9]|^3[01])-(?:0[1-9]|1[0-2])-(?:2\d{3})$/.test("25-02-2013");
+25-2-2013
+25-02-2013
+5-02-1999
+
+"dfgdsgfdg"
+/^(["'][^"']*\1$)/ - 
+["'] - " or ' 
+[^"'] - not " or ' 
+* - anything 
+\1 - when we grouped first["'] with round brackets like (["']) - it tell test() - create reference to this place
+to founded char " or ', refs called by order of appearance, so this ref = 1, and with \1 - we calling this 
+ref - to make test compare char on \1 with char founded where ref goes, so if we had " at the begining - 
+it will find " and compare char at \1 with it in our case we trying to find same quotes at start and at the end
+
+example - change positions of grouped element in the string
+"25-02-2013" to "02-2013-25"
+var reg = /^([0-2][1-9]|^[12][0-9]|^3[01])-(0[1-9]|1[0-2])-(2\d{3})$/;
+var string ="25-02-2013";
+var result = string.replace(reg,"$2-$3-$1");
+result;//"02-2013-25"
+
+###############################################################################################
+
+
+regex - examples http://regexlib.com/
+
+String.match()
+
+match() - creates array with match and props - index of match, input - original string
+if regex with ()refs - creates array from string with original stringand reffed strings
+if regex with g - creates array from all matches
+if regex not matched - returned not empty array, but null - another type
+
+var arr ="test@yahoo.com".match(/t/);
+
+arr;// 
+["t", index: 0, input: "test@yahoo.com"]
+
+var arr ="test@yahoo.com".match(/([a-z]+)@([a-z]+).([a-z]+)/);
+
+
+arr
+;// ["test@yahoo.com", "test", "yahoo", "com"]
+
+var arr ="test@yahoo.com".match(/t/g);
+
+
+arr;// ["t", "t"]
 
 
 
@@ -1538,37 +1743,4 @@ nums.map(function(value){return value*10;});
 ###############################################################################################
 ###############################################################################################
 ###############################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###############################################################################################
