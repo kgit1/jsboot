@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM</title>
+	<script type="text/javascript">
+		function func(){
+			console.log("Hello world");
+		}
+	</script>
+	<script type="text/javascript">
+		function fNavigator(){
+			var string ="";
+			for(var p in navigator){
+				console.log(p,":",navigator[p]);
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		function fScreen(){
+			var string ="";
+			for(var p in screen){
+				console.log(p,":",screen[p]);
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		function fLocation(){
+			var string ="";
+			for(var p in location){
+				console.log(p,":",location[p]);
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<p><a href="javascript:func()">Click HERE!</a></p>
+	<p><a href="javascript:fNavigator()">Navigator object!</a></p>
+	<p><a href="javascript:fScreen()">Screen object!</a></p>
+	<p><a href="javascript:fLocation()">Location object!</a></p>
+</body>
+</html>

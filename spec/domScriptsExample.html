@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM</title>
+	<script type="text/javascript">
+		function domWrite(){
+			document.write(
+				"<style type=\"text/css\">html{background:violet;}</style>");
+			document.write(
+				"<div>Context added by script</div>");
+		}
+		function dialogBoxes(){
+			var answer = confirm("Do you want to proceed?");
+			alert("User wants to proceed = " + answer);
+			if(answer){
+				var name = prompt("Enter your name");
+				if(!name){
+					name="anonymous";
+				}
+				alert("Hello, "+ name);
+			}
+		}
+	</script>
+</head>
+<body>
+	<p><a href="javascript:dialogBoxes()">dialogBoxes</a></p>
+	<p><a href="javascript:domWrite()">DOMScript</a></p>
+</body>
+</html>
