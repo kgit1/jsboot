@@ -5,7 +5,7 @@
 function sayHello(name){
 	//to prevent undefined name
 	//if name undefined(undefined = false),
-	//than second part assing "Guest" to name var
+	//than second part assign "Guest" to name var
 	name = name || "Guest";
 	print("Hello " +name + "!");
 }

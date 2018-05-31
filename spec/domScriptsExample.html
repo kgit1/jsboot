@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>DOM</title>
+	<!-- DOM dialog boxes -->
 	<script type="text/javascript">
 		function domWrite(){
 			document.write(
@@ -21,9 +22,62 @@
 			}
 		}
 	</script>
+	<!-- Timeouts and intervals -->
+	<script>
+		var timeoutTimer;
+		function callTimeout(){
+			timeoutTimer=window.setTimeout("alert(\"Boo\")",3000);
+		}
+		var intervalTimer;
+		function callInterval(){
+			intervalTimer=window.setTimeout("console.log(\"Boo\")",3000);
+		}
+		function stopInterval(){
+			window.clearInterval(intervalTimer);
+		}
+		function callAlert(myString){
+			console.log(myString);
+			alert(myString);
+		}
+		function callTimeoutWithFunction(){
+			timeoutTimer=setTimeout(function(){callAlert("Argument")},2000);
+		}
+	</script>
+	<script>
+		function User(name){
+			this.name=name;
+			this.sayName=function(){console.log(this.name);}
+		}
+		var user1 = new User("John");
+		function callUserOnTimeout(){
+			var timer;
+			// wrong
+			// timer=setTimeout(user1.sayName,3000);//	wouldn't work because setTimeout calls functions
+			// from global object, global object doesn't know what is this.name
+			// right way - to wrap function call inside anonymous function
+			timer=setTimeout(function(){user1.sayName();},3000);
+		}
+	</script>
+	<!-- open() close() -->
+	<script>
+		var newWindow;
+		function openNew(){
+			newWindow=window.open("https://www.google.com/");
+		}
+		function closeNew(){
+			newWindow.close();
+		}
+	</script>
 </head>
 <body>
-	<p><a href="javascript:dialogBoxes()">dialogBoxes</a></p>
+	<p><a href="javascript:dialogBoxes()">DialogBoxes</a></p>
 	<p><a href="javascript:domWrite()">DOMScript</a></p>
+	<p><a href="javascript:callTimeout()">Call timeout</a></p>
+	<p><a href="javascript:callInterval()">Call interval</a></p>
+	<p><a href="javascript:stopInterval()">Stop interval</a></p>
+	<p><a href="javascript:callTimeoutWithFunction()">Call timeout with function</a></p>
+	<p><a href="javascript:callUserOnTimeout()">Call user name timeout</a></p>
+	<p><a href="javascript:openNew()">open google</a></p>
+	<p><a href="javascript:closeNew()">close google</a></p>
 </body>
 </html>

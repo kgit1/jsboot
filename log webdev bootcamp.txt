@@ -1872,32 +1872,26 @@ interactivity, it is often referred to, as methods and properties of the BOM.
 The Window Object
 The window object is supported by all browsers. It represents the browser's window.
 
-All global JavaScript objects, functions, and variables automatically become members of the window 
-object.
+All global JavaScript objects, functions, and variables automatically become members of the window object.
 
 Global variables are properties of the window object.
-
 Global functions are methods of the window object.
-
 Even the document object (of the HTML DOM) is a property of the window object:
 
 window.document.getElementById("header");
 is the same as:
-
 document.getElementById("header");
 
 Window Size
 Two properties can be used to determine the size of the browser window.
-
 Both properties return the sizes in pixels:
 
 window.innerHeight - the inner height of the browser window (in pixels)
 window.innerWidth - the inner width of the browser window (in pixels)
-window.open() - open a new window
-window.close() - close the current window
-window.moveTo() -move the current window
-window.resizeTo() -resize the current window
-
+frameElement - Returns the <iframe> element in which the current window is inserted
+frames - Returns all <iframe> elements in the current window
+parent - to cal method of the main window from inside the iframe - parent.func()
+or parent.parent.func() if dipper, or top.func() - to call method of the main window from any deep
 
 #objects of the window object##################################################################
 #window.screen#################################################################################
@@ -2051,44 +2045,9 @@ When a prompt box pops up, the user will have to click either "OK" or "Cancel" t
 If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
 
 
-#window timing events###########################################################################
+#"javascript" pseudoprotocol####################################################################
 
-The window object allows execution of code at specified time intervals.
-These time intervals are called timing events.
-The two key methods to use with JavaScript are:
-
-setTimeout(function, milliseconds)
-Executes a function, after waiting a specified number of milliseconds.
-
-setInterval(function, milliseconds)
-Same as setTimeout(), but repeats the execution of the function continuously.
-The setTimeout() and setInterval() are both methods of the HTML DOM Window object.
-
-example - click a button. Wait 3 seconds, and the page will alert "Hello":
-<button onclick="setTimeout(myFunction, 3000)">Try it</button>
-<script>
-function myFunction() {
-    alert('Hello');
-}
-</script>
-
-How to Stop the Execution?
-If the function has not already been executed, you can stop the execution by calling the clearTimeout() method:
-The clearTimeout() method stops the execution of the function specified in setTimeout().
-window.clearTimeout(timeoutVariable)
-The window.clearTimeout() method can be written without the window prefix.
-The clearTimeout() method uses the variable returned from setTimeout():
-
-myVar = setTimeout(function, milliseconds);
-clearTimeout(myVar);
-
-examples - same example as above, but with an added "Stop" button:
-<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
-<button onclick="clearTimeout(myVar)">Stop it</button>
-
-
-#example script + script function call in <a> with "javascript" pseudoprotocol#################
-
+example script function call in <a> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -2131,6 +2090,150 @@ examples - same example as above, but with an added "Stop" button:
 	<p><a href="javascript:fLocation()">Location object!</a></p>
 </body>
 </html>
+
+
+#window timing events###########################################################################
+
+setTimeout(function, milliseconds);
+setInterval(function, milliseconds);
+clearTimeout(timeoutVariable);
+clearInterval(intervalVariable);
+
+The window object allows execution of code at specified time intervals.
+These time intervals are called timing events.
+
+setTimeout(function, milliseconds)
+Executes a function, after waiting a specified number of milliseconds.
+function argument for timeout passed as a string
+setTimeout("alert('Click')",1000);
+or as a function ref
+setTimeout(myFunction,1000);
+if function needs arguments - call it inside anonymous function
+setTimeout(function(){myFunction("myString");},1000);
+
+setInterval(function, milliseconds)
+Same as setTimeout(), but repeats the execution of the function continuously.
+The setTimeout() and setInterval() are both methods of the HTML DOM Window object.
+
+examples
+<script>
+	var timeoutTimer;
+	function callTimeout(){
+		timeoutTimer=window.setTimeout("alert(\"Boo\")",3000);
+	}
+	var intervalTimer;
+	function callInterval(){
+		intervalTimer=window.setTimeout("console.log(\"Boo\")",3000);
+	}
+	function stopInterval(){
+		window.clearInterval(intervalTimer);
+	}
+	function callAlert(myString){
+		console.log(myString);
+			alert(myString);
+	}
+	function callTimeoutWithFunction(){
+		timer=setTimeout(function(){callAlert("Argument");},2000);
+	}
+</script>
+click a button. Wait 3 seconds, and the page will alert "Hello":
+<script>
+	function myFunction() {
+    		alert('Hello');
+}
+</script>
+<button onclick="setTimeout(myFunction, 3000)">Try it</button>
+
+<script>
+	function User(name){
+		this.name=name;
+		this.sayName=function(){console.log(this.name);}
+	}
+	var user1 = new User("John");
+	function callUserOnTimeout(){
+		//wrong
+		//timer=setTimeout(user1.sayName,3000);//	wouldn't work because setTimeout calls functions
+		//from global object, global object doent know what is this.name
+		//right way - to wrap function call inside anonymous function
+		timer=setTimeout(function(){user1.sayName();},3000);
+	}
+</script>
+
+
+How to Stop the Execution?
+If the function has not already been executed, you can stop the execution by calling the clearTimeout() method:
+The clearTimeout() method stops the execution of the function specified in setTimeout().
+window.clearTimeout(timeoutVariable)
+The window.clearTimeout() method can be written without the window prefix.
+The clearTimeout() method uses the variable returned from setTimeout():
+
+myVar = setTimeout(function, milliseconds);
+clearTimeout(myVar);
+
+
+#window - open new window#######################################################################
+
+window.open(); - opens new window blank or by url or with some specs
+window.close(); - closes the window
+window.focus(); - sets focus to the specified window
+window.blur(); - removes focus from specified window and moves window to the background
+all can be used without window prefix 
+window.opener - reference to parent window if window was opened from another window
+
+open(url);
+open(URL, name, specs, replace)
+
+<script>
+	var newWindow;
+	function openNew(){
+		newWindow=window.open("https://www.google.com/");
+	}
+	function closeNew(){
+		newWindow.close();
+	}
+</script>
+
+URL - Optional. Specifies the URL of the page to open. If no URL is specified, a new window with about:blank is 
+opened
+name - Optional. Specifies the target attribute or the name of the window. The following values are supported:
+_blank - URL is loaded into a new window. This is default
+_parent - URL is loaded into the parent frame
+_self - URL replaces the current page
+_top - URL replaces any framesets that may be loaded
+name - The name of the window (Note: the name does not specify the title of the new window)
+
+specs - Optional. A comma-separated list of items, no whitespaces. The following values are supported:
+channelmode=yes|no|1|0	Whether or not to display the window in theater mode. Default is no. IE only
+directories=yes|no|1|0	Obsolete. Whether or not to add directory buttons. Default is yes. IE only
+fullscreen=yes|no|1|0	Whether or not to display the browser in full-screen mode. Default is no. A window in 
+full-screen mode must also be in theater mode. IE only
+height=pixels	The height of the window. Min. value is 100
+left=pixels	The left position of the window. Negative values not allowed
+location=yes|no|1|0	Whether or not to display the address field. Opera only
+menubar=yes|no|1|0	Whether or not to display the menu bar
+resizable=yes|no|1|0	Whether or not the window is resizable. IE only
+scrollbars=yes|no|1|0	Whether or not to display scroll bars. IE, Firefox & Opera only
+status=yes|no|1|0	Whether or not to add a status bar
+titlebar=yes|no|1|0	Whether or not to display the title bar. Ignored unless the calling application is an HTML 
+Application or a trusted dialog box
+toolbar=yes|no|1|0	Whether or not to display the browser toolbar. IE and Firefox only
+top=pixels	The top position of the window. Negative values not allowed
+width=pixels	The width of the window. Min. value is 100
+
+replace - Optional. Specifies whether the URL creates a new entry or replaces the current entry in the history list. 
+The following values are supported:
+true - URL replaces the current document in the history list
+false - URL creates a new entry in the history list
+
+
+#window - move, change#######################################################################
+
+resizeBy() - resizes the window by the specified pixels
+resizeTo() - resizes the window to the specified pixels
+moveBy() - moves a window relative to its current position
+moveTo() - moves a window to the specified position
+scrollBy() - scrolls the document by the specified number of pixels
+scrollTo() - scrolls the document to the cpecified position
 
 
 #window.document################################################################################
